@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { ConfirmModal } from "@/components/modals/confirm-modal";
+import { useConfettiStore } from "@/hooks/use-confetti-store";
 
 interface ChapterActionsProps {
   disabled: boolean;
@@ -23,6 +24,7 @@ export const ChapterActions = ({
   isPublished,
 }: ChapterActionsProps) => {
   const router = useRouter();
+  const confetti = useConfettiStore();
   const [isLoading, setIsLoading] = useState(false);
 
   const onClick = async () => {
@@ -39,6 +41,7 @@ export const ChapterActions = ({
           `/api/courses/${courseId}/chapters/${chapterId}/publish`
         );
         toast.success("Chapter published");
+        confetti.onOpen();
       }
 
       router.refresh();
