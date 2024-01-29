@@ -10,6 +10,7 @@ interface FileUploadProps {
 const FileUpload = ({ onChange, endpoint }: FileUploadProps) => {
   return (
     <UploadDropzone
+      className="FileUpload ut-label:text-fuchsia-700 ut-upload-icon:text-fuchsia-700"
       endpoint={endpoint}
       onClientUploadComplete={(res) => {
         onChange(res?.[0].url);
