@@ -2,15 +2,14 @@
 
 import { Category } from "@prisma/client";
 import {
-  FcBusinessman,
-  FcEditImage,
+  FcEngineering,
   FcFilmReel,
-  FcHome,
+  FcMultipleDevices,
+  FcMusic,
   FcOldTimeCamera,
+  FcSalesPerformance,
   FcSportsMode,
-  FcVoicePresentation,
 } from "react-icons/fc";
-
 import { IconType } from "react-icons";
 
 import { CategoryItem } from "./category-item";
@@ -20,13 +19,13 @@ interface CategoriesProps {
 }
 
 const iconMap: Record<Category["name"], IconType> = {
-  Fashion: FcBusinessman,
+  Music: FcMusic,
   Photography: FcOldTimeCamera,
   Fitness: FcSportsMode,
-  Editing: FcEditImage,
-  "Story Telling": FcVoicePresentation,
+  Accounting: FcSalesPerformance,
+  "Computer Science": FcMultipleDevices,
   Filming: FcFilmReel,
-  Travel: FcHome,
+  Engineering: FcEngineering,
 };
 
 export const Categories = ({ items }: CategoriesProps) => {
