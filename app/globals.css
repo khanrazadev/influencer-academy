@@ -72,6 +72,18 @@ body,
   }
 }
 
+.cl-formButtonPrimary {
+  background-color: rgb(162 28 175);
+}
+.cl-formButtonPrimary:hover {
+  background-color: rgba(163, 28, 175, 0.833);
+}
+.cl-internal-b3fm6y {
+  background-color: rgb(162 28 175);
+}
+.cl-footerActionLink {
+  color: rgb(162 28 175);
+}
 .FileUpload > *[data-ut-element="button"] {
   background-color: rgb(162 28 175);
 }
