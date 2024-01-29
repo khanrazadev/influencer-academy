@@ -4,8 +4,8 @@ import SidebarItem from "./sidebar-item";
 import { usePathname } from "next/navigation";
 
 const guestRoutes = [
-  { label: "Dashboard", href: "/", icon: Layout },
-  { label: "Browse", href: "/search", icon: Compass },
+  { label: "Browse", href: "/", icon: Compass },
+  { label: "Dashboard", href: "/dashboard", icon: Layout },
 ];
 
 const teacherRoutes = [
