@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Influencer Academy
 
-## Getting Started
+Welcome to Influencer Academy, a Next.js-based web application designed to empower influencers on their educational journey. This project combines the power of Next.js, Prisma ORM, MySQL, and TypeScript to deliver a robust and feature-rich platform. Please note that Influencer Academy is not open source.
 
-First, run the development server:
+## Platform Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js-based web application**: Utilizing the power of Next.js for a seamless and efficient web experience.
+- **Prisma ORM, MySQL, and TypeScript integration**: Ensuring a solid foundation for data management and a type-safe codebase.
+- **User-friendly interface with Tailwind CSS and Shadcn**: Creating an intuitive and visually appealing design for an enhanced user experience.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Course Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Influencer Academy offers a structured educational experience with:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Comprehensive courses with multiple chapters**: Delve deep into various topics with well-organized course content.
+- **Options for both free and premium courses**: Providing flexibility for users to choose between free and premium educational content.
+- **Chapter-based learning**: Facilitating a systematic learning approach with segmented chapters.
 
-## Learn More
+## Payment Processing
 
-To learn more about Next.js, take a look at the following resources:
+Influencer Academy ensures secure and seamless payment transactions:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **End-to-end payments facilitated by Stripe**: Guaranteeing a secure payment environment for users.
+- **Seamless transaction experience for premium content**: Enabling a smooth transition for users accessing premium educational material.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Development Practices
 
-## Deploy on Vercel
+Our commitment to quality development practices includes:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Clean and maintainable codebase**: Prioritizing code readability and maintainability for a smooth development process.
+- **Adherence to industry best practices**: Following established standards to ensure high-quality code.
+- **Optimization for speed and performance**: Prioritizing speed and performance optimization for an efficient user experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## User Experience
+
+Influencer Academy is designed with the user in mind:
+
+- **Responsive design**: Ensuring an optimal learning environment across various devices.
+- **Tailored for influencers**: Creating a platform specifically crafted to meet the unique needs of influencers on their educational journey.
+
+## How to Use
+
+### Admin Access
+
+To access admin functionalities and create courses, use the following credentials:
+
+- **Email**: admin@test.com
+- **Password**: 123456
+
+### Normal User Access
+
+For testing course purchasing as a normal user, please use the following dummy card number:
+
+- **Card Number**: 4000 0035 6000 0008
+
+**Note**: As Influencer Academy is not open source, please refrain from sharing or distributing the source code without proper authorization. If you have any questions or concerns, feel free to contact the project maintainers. Happy learning!
