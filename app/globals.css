@@ -72,6 +72,14 @@ body,
   }
 }
 
+.FileUpload > *[data-ut-element="button"] {
+  background-color: rgb(162 28 175);
+}
+
+.FileUpload > *[data-ut-element="button"][data-state="uploading"]::after {
+  background-color: rgb(162 28 175);
+}
+
 @layer base {
   * {
     @apply border-border;
