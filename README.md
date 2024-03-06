@@ -1,48 +1,81 @@
 # Influencer Academy
 
-Welcome to Influencer Academy, a Next.js-based web application designed to empower influencers on their educational journey. This project combines the power of Next.js, Prisma ORM, MySQL, and TypeScript to deliver a robust and feature-rich platform. Please note that Influencer Academy is not open source.
+Introducing Influencer Academy, a web application built on Next.js, tailored to empower influencers on their educational journey. This project leverages the capabilities of Next.js, Prisma ORM, MySQL, and TypeScript to provide a robust and feature-rich platform.
 
-## Platform Overview
+## Key Features:
 
-- **Next.js-based web application**: Utilizing the power of Next.js for a seamless and efficient web experience.
-- **Prisma ORM, MySQL, and TypeScript integration**: Ensuring a solid foundation for data management and a type-safe codebase.
-- **User-friendly interface with Tailwind CSS and Shadcn**: Creating an intuitive and visually appealing design for an enhanced user experience.
+- **Browse & Filter Courses**: Easily browse and refine courses to find what suits you best.
+- **Secure Purchases**: Buy courses securely using Stripe.
+- **Track Progress**: Monitor your course progress and mark chapters as completed or pending.
+- **Student & Teacher Modes**: Seamlessly switch between student and teacher modes for different functionalities.
+- **Content Creation**: Create new courses and chapters effortlessly.
+- **Intuitive Design**: Rearrange chapters with drag and drop, upload multimedia content with ease using UploadThing.
+- **Video Integration**: Utilize Mux for seamless video processing and playback.
+- **Enhanced Descriptions**: Craft engaging chapter descriptions using a rich text editor.
+- **Secure Authentication**: Login securely using Clerk.
+- **Reliable Data Management**: Utilize Prisma for efficient data management with MySQL database hosted on Planetscale.
 
-## Course Structure
+## Prerequisites
 
-Influencer Academy offers a structured educational experience with:
+**Node version 18.x.x**
 
-- **Comprehensive courses with multiple chapters**: Delve deep into various topics with well-organized course content.
-- **Options for both free and premium courses**: Providing flexibility for users to choose between free and premium educational content.
-- **Chapter-based learning**: Facilitating a systematic learning approach with segmented chapters.
+**Cloning the repository**
 
-## Payment Processing
+```bash
+https://github.com/razakhan05/influencer-academy.git
+```
+## Install packages
 
-Influencer Academy ensures secure and seamless payment transactions:
+```bash
+npm i
+```
+## Setup .env file
 
-- **End-to-end payments facilitated by Stripe**: Guaranteeing a secure payment environment for users.
-- **Seamless transaction experience for premium content**: Enabling a smooth transition for users accessing premium educational material.
+```bash
+  STRIPE_WEBHOOK_SECRET = 
+  NEXT_PUBLIC_APP_URL = http://localhost:3000
+  NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+  CLERK_SECRET_KEY=
+  
+  NEXT_PUBLIC_CLERK_SIGN_IN_URL = /sign-in
+  NEXT_PUBLIC_CLERK_SIGN_UP_URL = /sign-up
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL = /
+  NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL = /
+  UPLOADTHING_SECRET = 
+  UPLOADTHING_APP_ID = 
+  DATABASE_URL=''
+  MUX_TOKEN_ID = 
+  MUX_TOKEN_SECRET = 
+  STRIPE_API_KEY =
+  NEXT_PUBLIC_TEACHER_ID =
+```
+**Setup Prisma**
 
-## Development Practices
+Add MySQL Database (I used PlanetScale)
 
-Our commitment to quality development practices includes:
+```bash
+npx prisma generate
+npx prisma db push
 
-- **Clean and maintainable codebase**: Prioritizing code readability and maintainability for a smooth development process.
-- **Adherence to industry best practices**: Following established standards to ensure high-quality code.
-- **Optimization for speed and performance**: Prioritizing speed and performance optimization for an efficient user experience.
+```
+**Additional Important Command**
 
-## User Experience
+```bash
+node scripts/seed.ts
 
-Influencer Academy is designed with the user in mind:
+```
+**Start The App**
 
-- **Responsive design**: Ensuring an optimal learning environment across various devices.
-- **Tailored for influencers**: Creating a platform specifically crafted to meet the unique needs of influencers on their educational journey.
+```bash
+npm run dev
 
-## How to Use
+```
 
 ### Admin Access
 
-To access admin functionalities and create courses, use the following credentials:
+**Only admin can create courses and chapters**
+
+so,to access admin functionalities and create courses, use the following credentials:
 
 - **Email**: admin@test.com
 - **Password**: 123456
@@ -52,5 +85,3 @@ To access admin functionalities and create courses, use the following credential
 For testing course purchasing as a normal user, please use the following dummy card number:
 
 - **Card Number**: 4000 0035 6000 0008
-
-**Note**: As Influencer Academy is not open source, please refrain from sharing or distributing the source code without proper authorization. If you have any questions or concerns, feel free to contact the project maintainers. Happy learning!
