@@ -51,7 +51,7 @@ npm i
 ```
 **Setup Prisma**
 
-Add MySQL Database (I used PlanetScale)
+Add MongoDB Database (I used Atlas)
 
 ```bash
 npx prisma generate
