@@ -9,7 +9,7 @@ async function main() {
 
     // Extract existing category names
     const existingCategoryNames = new Set(
-      existingCategories.map((category: { name: any }) => category.name)
+      existingCategories.map((category) => category.name)
     );
 
     // Define the categories you want to seed
