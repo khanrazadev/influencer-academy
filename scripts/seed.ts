@@ -1,4 +1,9 @@
-const { PrismaClient } = require("@prisma/client");
+import { PrismaClient } from "@prisma/client";
+
+// Define the Category interface
+interface Category {
+  name: string;
+}
 
 const database = new PrismaClient();
 
@@ -7,13 +12,11 @@ async function main() {
     // Check if categories already exist in the database
     const existingCategories = await database.category.findMany();
 
-    // Filter out existing category names
-    const existingCategoryNames = existingCategories.map(
-      (category: { name: any }) => category.name
-    );
+    // Extract existing category names
+    const existingCategoryNames = new Set(existingCategories.map((category: Category) => category.name));
 
     // Define the categories you want to seed
-    const categoriesToSeed = [
+    const categoriesToSeed: Category[] = [
       { name: "Photography" },
       { name: "Filming" },
       { name: "Story Telling" },
@@ -25,7 +28,7 @@ async function main() {
 
     // Filter out categories that already exist in the database
     const newCategories = categoriesToSeed.filter(
-      (category) => !existingCategoryNames.includes(category.name)
+      (category: Category) => !existingCategoryNames.has(category.name)
     );
 
     // Create only the new categories
