@@ -21,6 +21,7 @@ const SearchPage = async ({ searchParams }: SearchPageProps) => {
   }
 
   const categories = await db.category.findMany({
+    distinct: ["name"],
     orderBy: {
       name: "asc",
     },
