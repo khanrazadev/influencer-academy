@@ -11,7 +11,7 @@ async function main() {
     const uniqueCategoryNames = new Set();
 
     // Filter out duplicates and add unique category names to the set
-    existingCategories.forEach((category: any) => {
+    existingCategories.forEach((category) => {
       uniqueCategoryNames.add(category.name);
     });
 
